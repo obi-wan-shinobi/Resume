@@ -1,0 +1,200 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Blue}{HTML}{1EA5E8}
+\colorlet{heading}{arsenic}
+\colorlet{accent}{arsenic}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\colorlet{subheading}{Blue}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Shreyas Kalvankar}
+\tagline{}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+%\photoR{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{shreyaskalvankar@gmail.com}
+  \phone{+919423555723}
+  \location{Maharashtra, India}
+  \linkedin{linkedin.com/in/shreyas-kalvankar}
+  \github{github.com/obi-wan-shinobi}
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Summer Intern}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Nashik, India}
+\begin{itemize}
+\item Set up an online platform for Forex trading and essential services such as market news, chatbot, etc using AngularJS
+\item Created a python module for stress testing CPU and memory with variable load
+\end{itemize}
+
+\cvsection{Technical Skills}
+\cvskill{C/C++, Python, Java}{4}
+\cvskill{Deep Learning}{4}
+\cvskill{Computer Vision}{4}
+\cvskill{Machine Learning}{3}
+\cvskill{Databases}{3}
+\cvskill{Robotics}{3}
+\cvskill{Web Development}{2}
+
+\cvsection{Software Skills}
+\begin{itemize}
+    \item \textbf{Python Libraries} : Tensorflow, keras, pandas, numpy, matplotlib
+    \item \textbf{C++} : Generic programming, Standard Template Libraries
+    \item \textbf{Deep Learning} : Image recognition and classification, time series analysis, Natural Language Processing
+    \item \textbf{Tools} : Git, Octave
+    \item \textbf{Embedded Software Programming} : Arduino, Raspberry Pi, Teensy
+\end{itemize}
+
+\cvsection{Positions of Responsibility}
+\cvevent{Software Developer}{Team Vector, ABU Robocon 2019}{August 2018 - April 2019}{}
+\begin{itemize}
+    \item Helped build and develop a code for an autonomous quadruped robot
+\end{itemize}
+
+\divider
+
+\cvevent{Mentor}{Team Vector, ABU Robocon 2020}{August 2019 - April 2020}{}
+\begin{itemize}
+    \item Helped and guided junior members of the team in building a omni-wheeled robot
+\end{itemize}
+
+\cvsection{Strengths}
+\cvtag{Curious}
+\cvtag{Hardworking}
+\cvtag{Adaptable}
+\cvtag{Communication skills}
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+\cvevent{B.E (Computer Engineering)}{K.K. Wagh Institute of Engineering Education and Research}{2017-2021}{Nashik}
+\begin{itemize}
+    \item CGPA: 9.54/10
+\end{itemize}
+
+\cvevent{Higher Secondary Certificate}{H.P.T Arts and R.Y.K Science College}{2017}{Nashik}
+\begin{itemize}
+    \item 87.07\%
+\end{itemize}
+
+\cvevent{Secondary School Certificate}{Boys' Town Public School}{2015}{Nashik}
+\begin{itemize}
+    \item 94.4\%
+\end{itemize}
+
+\cvsection{Projects \& Research}
+\cvsubsection{THE GALAXY ZOO PROJECT}
+\begin{itemize}
+    \item Studied galaxy morphology classification and CNN architectures
+    \item Developed a CNN architecture for the vote fraction predictions of 37 features in the galaxy zoo decision tree
+    \item Developed a network for classification of galaxies into seven morphologies
+\end{itemize}
+\cvsubsection{THE EINSTEINPY PROJECT}
+\begin{itemize}
+    \item An open source community python package for general relativity
+    \item \textbf{Contributions}:
+    \begin{itemize}
+        \item Addition of  Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations (\textit{PR: \#462 Issue: \#309})
+        \item Correction in the Kerr-Newman and Kerr metrics
+        \item Added calculations of event horizon and ergosphere for a Kerr-Newman blackhole (\textit{PR: \#472 Issue: \#109}) 
+    \end{itemize}
+\end{itemize}
+\cvsection{Publications}
+\nocite{*}
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}}, type=misc]
+\end{paracol}
+
+\end{document}
