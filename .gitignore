@@ -1,1 +1,16 @@
-multiple_pages/'Shreyas Kalvankar.pdf'
+multiple_pages/Shreyas\ Kalvankar\ CV.pdf
+multiple_pages(concise)/Shreyas\ Kalvankar\ Resume.pdf
+**/*/*.log
+**/*/*.synctex.gz
+**/*/*.out
+**/*/*.toc
+**/*/*.aux
+**/*/*.bbl
+**/*/*.blg
+**/*/*.toc
+**/*/*.lof
+**/*.lot
+**/*/*.fdb_latexmk
+**/*/*.fls
+**/*/*.bcf
+**/*/*.xml
