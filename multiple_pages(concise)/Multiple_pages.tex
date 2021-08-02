@@ -49,6 +49,8 @@
 \usepackage{setspace}
 \usepackage{biblatex}
 
+\usepackage{verbatim}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -63,7 +65,8 @@
 \name{Shreyas Kalvankar} % Your name
 \address{\faMapMarker ~ Nashik, Maharashta, India} % Your address
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{\footnotesize \faPhone ~ (+91)~9423555723 ~ \faEnvelope ~ shreyaskalvankar@gmail.com ~ \faLinkedin ~ linkedin.com/in/shreyas-kalvankar ~ \faGithub ~ github.com/obi-wan-shinobi} % Your phone number and email
+\address{\footnotesize \faPhone ~ (+91)~9423555723 ~ \faEnvelope ~ shreyaskalvankar@gmail.com ~ \faLinkedin ~ linkedin.com/in/shreyas-kalvankar ~ \faGithub ~ github.com/obi-wan-shinobi ~} % Your phone number and email
+
 
 \addbibresource{references.bib}
 
@@ -78,7 +81,7 @@
 \begin{rSection}{Education}
 
 {\bf Bachelor of Engineering (Computer Engineering)} \hfill {\em 2017 - 2021}
-\\ K.K. Wagh Institute of Engineering  \hfill { Overall GPA: 9.58/10}
+\\ K.K. Wagh Institute of Engineering  \hfill { Overall GPA: 9.67/10}
 \\ Education \& Research, Nashik
 
 \smallskip
@@ -87,10 +90,12 @@
 \\ HPT Arts \& RYK Science College, Nashik \hfill { Percentage: 87.07\%}
 
 \smallskip
+\begin{comment}
 
 {\bf Secondary School Certificate} \hfill {\em 2015}
 \\ Boys' Town Public School, Nashik \hfill { Percentage: 94.4\% }
 
+\end{comment}
 \end{rSection}
 %----------------------------------------------------------------------------------------
 %	TECHNICAL STRENGTHS SECTION
@@ -119,10 +124,10 @@ Version Control & Git, GitHub \\
 \smallskip
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Summer Intern}{}
-\item Developed a front-end platform using AngularJS for forex trading with history charts, exchange rates and along with a news portal and chatbot service
-\item Studied and analysed data cubes and OLAP for business intelligence using company platforms
-\item Studied technical analysis of market indices and option chain (equity derivatives)
+\begin{rSubsection}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Software Development Intern}{}
+\item Developed a front-end using AngularJS for forex trading with interactive visualization and chatbot service, providing an appealing platform for forex operations
+\item Studied OLAP and data cubes for business intelligence on new company products to increase sales
+\item Studied technical analysis of market indices and option chain (equity derivatives) for better pricing models
 \item Created a python module for stress testing CPU and memory as per user input using variable load calibration
 \item Documented relevant codes and procedure
 \item GitHub: \href{https://github.com/obi-wan-shinobi/Stress-test}{CPU and Memory Stressing module} \& \href{https://github.com/obi-wan-shinobi/Forex-Trading}{Forex Trading Platform}
@@ -150,30 +155,30 @@ Version Control & Git, GitHub \\
 \begin{rSection}{PROJECTS \& RESEARCH}
 
 \begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/Galaxy_Zoo}{The Galaxy Zoo Project}}{August 2019 - September 2020}{}{}
-\item A galaxy morphology classification project using deep learning
-\item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with an rmse score of \textbf{0.07765} which ranked us in the \textbf{top 3} on the public leaderboard
+\item A galaxy morphology classification project, based on Kaggle Galaxy Zoo 2 competition
+\item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with an rmse score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard
 \item Developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/einsteinpy}{The EinsteinPy Project}}{March 2020 - April 2020}{}{}
 \item Contributer to an open source community python package for general relativity
-\item Added Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations
+\item Added Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations, into the code
 \item Corrections in the Kerr-Newman and Kerr metrics classes
 \item Added calculations of event horizon and ergosphere for a Kerr-Newman blackhole
 \item \href{https://doi.org/10.5281/zenodo.4445219
 }{DOI: 10.5281/zenodo.4445219}
 \end{rSubsection}
 
-\begin{rSubsection}{\href{https://github.com/users/obi-wan-shinobi/projects/1}{Astronomical Image Colorization and Super-resolution using GANs}}{August 2020 - Present}{}{}
-\item Performed research on different techniques to colorize grayscale images and methods for super resolution of images
-\item Implemented a code in puppeteer to scrape the Hubble legacy archive
-\item Developed a prototype model for coloring images using GANs
+\begin{rSubsection}{\href{https://github.com/users/obi-wan-shinobi/projects/1}{Astronomical Image Colorization and Super-resolution using GANs}}{August 2020 - June 2021}{}{}
+\item A project for efficiently colorizing and up scaling unused astronomical images that could be potentially used for astronomical studies
+\item Created a dataset for the underlying problem by scraping images off the Hubble archives
+\item Developed variations GAN architectures for colorizing images achieving visually pleasing results
+\item Implemented a variation of SRGAN architecture suitable for the data and obtained high resolution images
 \end{rSubsection}
 
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/Modern-Art}{Generative Adversarial Networks}}{June 2020 - Present}{}{}
-\item Developed a python code to scrape data off Wiki-Art
-\item Implemented a variation of DCGAN to generate images of art based on different input datasets
-\item Implemented a different variation of DCGAN to colorize grayscale  images
+\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/Modern-Art}{Miyazaki Art Cycle GAN}}{June 2020 - Present}{}{}
+\item A cycle GAN project for producing animated images in Studio Ghibli art style 
+\item Used conditional GANs in cyclic fashion to effectively produce anime style abstractions of real world photographs
 \end{rSubsection}
 
 \begin{rSubsection}{Robocon}{August 2018 - April 2019}{}{}
@@ -181,16 +186,6 @@ Version Control & Git, GitHub \\
 \item Two robots were created, one being an autonomous quadruped and the other a wheeled robot which had dynamic locomotive abilities
 \end{rSubsection}
 
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/BTC_predictor}{Time series analysis and prediction}}{March 2019}{}{}
-\item A RNN that analyses and predicts time series viz, BTC/USD time series with an accuracy of \textbf{98\%}
-\item Prediction of the COVID-19 epi-curve using active cases data
-\end{rSubsection}
-
-\begin{rSubsection}{Natural Language Processing}{December 2019 - May 2020}{}{}
-\item Created a RNN model and trained it over jokes dataset to generate jokes
-\item Created a RNN \& LSTM network model and trained it over a poem dataset to generate poems
-\item Created and trained an ngram model and trained it over twitter data to generate tweets
-\end{rSubsection}
 
 % \begin{rSubsection}{Game Development using Unity}{December 2018 - March 2019}{}{}
 % \item Created a first person shooter game in C\# using Unity engine
@@ -199,7 +194,7 @@ Version Control & Git, GitHub \\
 
 \end{rSection}
 
-
+\begin{comment}
 
 %--------------------------------------------------
 \begin{rSection}{Relevant Courses}
@@ -220,7 +215,7 @@ Version Control & Git, GitHub \\
 
 
 \end{rSection}
-
+\end{comment}
 
 
 %----------------------------------------------------
@@ -419,7 +414,6 @@ Version Control & Git, GitHub \\
 \end{rSection}
 
 
-
 %--------------------------------------------------
 \begin{rSection}{Relevant Courses}
 \itab{\textbf{Core Courses}} \tab{}  \tab{\textbf{MOOC}}
@@ -458,6 +452,5 @@ Version Control & Git, GitHub \\
 \\ \itab{Computer Vision} \tab{}  \tab{Data Science}
 \\ \itab{Differential Geometry \& General Relativity}
 \end{rSection}
-
 
 \end{document}
