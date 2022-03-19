@@ -28,7 +28,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1.20cm,right=1.20cm,top=1.4cm,bottom=1.4cm,columnsep=1.1cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -111,11 +111,22 @@
 \begin{paracol}{2}
 
 \cvsection{Experience}
-
-\cvevent{SOftware Development Intern}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Nashik, India}
+\cvevent{Software Developer}{Dalton Maag}{November 2021 - Present}{London, United Kingdom}
 \begin{itemize}
-\item Set up an online platform for Forex trading and essential services such as market news, chatbot, etc using AngularJS as a new feature for the customers
-\item Made python module for stress testing CPU and memory with variable load for integration in the company cloud platforms' testing pipeline
+    \item Worked on a novel technique of CJK font glyph generation using genetic algorithms
+\end{itemize}
+\divider
+\cvevent{Machine Learning Engineer}{Relfor Labs Pvt. Ltd.}{August 2021 - November 2021}{Pune, India}
+\begin{itemize}
+    \item Worked on audio data classification and designed multiple novel deep convolutional neural network architectures and hybrids which beat state of the art models with \textbf{>99\%} accuracy and \textbf{$\sim$0.99} F1-score
+    \item Performed extensive research on the designed architectures to understand data distribution of the network embeddings to create \textbf{novel loss functions}, a \textbf{customized gated unit block} and model tweaks for effectively boosting performance
+    \item Analysed the network output distribution by applying statistical methods for calculating threshold values to boost model performance to \textbf{$\sim$99.98\%} accuracy and \textbf{100\%} precision
+\end{itemize}
+\divider
+\cvevent{Software Development Intern}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Nashik, India}
+\begin{itemize}
+\item Set up an online platform for Forex trading using AngularJS as a new feature for the customers
+\item Created a python module for stress testing CPU and memory with variable load for integration in the company cloud platforms' testing pipeline
 \end{itemize}
 
 \begin{comment}
@@ -130,11 +141,11 @@
 \end{comment}
 
 
-\cvsection{Software Strengths}
+\cvsection{Technical Skills}
 \begin{itemize}
     \item \textbf{Computer Languages} : C, C++, Python
     \item \textbf{Web Development} : AngularJS, Typescript, HTML, CSS
-    \item \textbf{Deep Learning Frameworks} : Keras, Tensorflow
+    \item \textbf{Deep Learning Frameworks} : Keras, Tensorflow, PyTorch
     \item \textbf{Machine Learning Frameworks} : Octave, Sci-kit Learn
     \item \textbf{Embedded Software Programming} : Arduino, Raspberry Pi, Teensy
     \item \textbf{Version Control} : Git, GitHub
@@ -143,19 +154,17 @@
 \cvsection{Positions of Responsibility}
 \cvevent{Software Developer}{Team Vector, ABU Robocon 2019}{August 2018 - April 2019}{}
 \begin{itemize}
-    \item Assigned to build and code a quadruped robot and a wheeled robot with dynamic locomotive abilities for
-ABU Robocon 2019
-    \item Two robots were created, one being an autonomous quadruped and the other a wheeled robot which had dynamic locomotive abilities
+    \item Assigned to build and code a quadruped robot and a wheeled robot with dynamic locomotive abilities for ABU Robocon 2019
 \end{itemize}
 
 \divider
 
 \cvevent{Mentor}{Team Vector, ABU Robocon 2020}{August 2019 - April 2020}{}
 \begin{itemize}
-    \item Helped and guided junior members of the team in building a omni-wheeled robot
-    \item Created autonomous robots with actuators that could efficiently handle throwing, catching and kicking a football
+    \item Helped and guided junior members of the team in building robots that could efficiently handle locomotion and throwing, catching and kicking a football
 \end{itemize}
 
+\begin{comment}
 \cvsection{Strengths}
 \cvtag{Deep Learning}
 \cvtag{Machine Learning \& Data Science}\\
@@ -164,8 +173,7 @@ ABU Robocon 2019
 \cvtag{Hardworking}\\
 \cvtag{Adaptable}
 \cvtag{Communication skills}
-
-
+\end{comment}
 %% Switch to the right column. This will now automatically move to the second
 %% page if the content is too long.
 \switchcolumn
@@ -173,7 +181,7 @@ ABU Robocon 2019
 \cvsection{Education}
 \cvevent{B.E (Computer Engineering)}{K.K. Wagh Institute of Engineering Education and Research}{2017-2021}{Nashik}
 \begin{itemize}
-    \item CGPA: 9.58/10
+    \item CGPA: 9.7/10
 \end{itemize}
 
 \cvevent{Higher Secondary Certificate}{H.P.T Arts and R.Y.K Science College}{2017}{Nashik}
@@ -188,12 +196,21 @@ ABU Robocon 2019
 \end{itemize}
 \end{comment}
 
-\cvsection{Projects \& Research}
-\cvsubsection{THE GALAXY ZOO PROJECT}
-\begin{itemize}
-    \item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with an rmse score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard
-    \item Developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}
-\end{itemize}
+\cvsection{Personal Projects \& Research}
+
+    \cvsubsection{THE GALAXY ZOO PROJECT}
+    \begin{itemize}
+        \item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with an rmse score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard
+        \item Developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}
+    \end{itemize}
+\begin{comment}
+\cvsubsection{THE SCHRODPY PROJECT}
+    \begin{itemize}
+        \item The project is in early phases, which plans at providing an efficient simulation of quantum systems
+        \item Applied various methods to numerically solve Schrödinger's Time Independent wave equation for finding stationary states of the particle in an Infinite Potential Well
+        \item Prospects: An efficient and community python package for simulating quantum many-body systems using tensor networks
+    \end{itemize}
+\end{comment}
 \cvsubsection{THE EINSTEINPY PROJECT}
 \begin{itemize}
     \item An open source community python package for general relativity
