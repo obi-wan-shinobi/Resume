@@ -39,7 +39,7 @@
 \documentclass{resume} % Use the custom resume.cls style
 
 \usepackage{hyperref}
-\usepackage[left=0.65in,top=0.5in,right=0.65in,bottom=0.5in]{geometry} % Document margins
+\usepackage[left=0.45in,top=0.35in,right=0.45in,bottom=0.35in]{geometry} % Document margins
 
   % If using pdflatex:
 \usepackage[utf8]{inputenc}
@@ -48,9 +48,9 @@
 \usepackage{fontawesome}
 \usepackage{setspace}
 \usepackage{biblatex}
-
-\usepackage{verbatim}
-
+\usepackage{dashrule}
+\usepackage{graphicx}
+\usepackage{tikz}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -59,14 +59,15 @@
     urlcolor=cyan,
 }
 
+\newcommand*\googlescholaricon{\raisebox{-0.3em}{\includegraphics[width=1em]{google-scholar.pdf}}}
 
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Shreyas Kalvankar} % Your name
 \address{\faMapMarker ~ Nashik, Maharashta, India} % Your address
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{\footnotesize \faPhone ~ (+91)~9423555723 ~ \faEnvelope ~ shreyaskalvankar@gmail.com ~ \faLinkedin ~ linkedin.com/in/shreyas-kalvankar ~ \faGithub ~ github.com/obi-wan-shinobi ~} % Your phone number and email
-
+\address{\footnotesize \faPhone ~ (+91)~9423555723 ~ \faEnvelope ~ shreyaskalvankar@gmail.com ~ \faLinkedin ~ \href{https://linkedin.com/in/shreyas-kalvankar}{linkedin.com/in/shreyas-kalvankar} ~ \faGithub ~ \href{https://github.com/obi-wan-shinobi}{github.com/obi-wan-shinobi} ~ 
+\googlescholaricon ~ \href{https://scholar.google.com/citations?hl=en&user=W8-T__UAAAAJ}{Scholar}}
 
 \addbibresource{references.bib}
 
@@ -80,40 +81,64 @@
 
 {\bf Bachelor of Engineering (Computer Engineering)} \hfill {\em 2017 - 2021}
 \\ K.K. Wagh Institute of Engineering  \hfill { Overall GPA: 9.7/10}
-\\ Education \& Research, Nashik
+\\ Education \& Research, Nashik    \hfill {\small{(Rank 1)}}
 
 \smallskip
 
-{\bf Higher Secondary Certificate} \hfill {\em 2017}
-\\ HPT Arts \& RYK Science College, Nashik \hfill { Percentage: 87.07\%}
+% {\bf Higher Secondary Certificate} \hfill {\em 2017}
+% \\ HPT Arts \& RYK Science College, Nashik \hfill { Percentage: 87.07\%}
 
-\smallskip
-\begin{comment}
-
-{\bf Secondary School Certificate} \hfill {\em 2015}
-\\ Boys' Town Public School, Nashik \hfill { Percentage: 94.4\% }
-
-\end{comment}
 \end{rSection}
+\begin{rSection}{PUBLICATIONS}
+\vspace{-1em}
+\item Shreyas Bapat et al. \textit{EinsteinPy: A Community Python Package for General Relativity.} 2020.\\ arXiv: \href{https://arxiv.org/abs/2005.11288}{2005.11288 [gr-qc]}.
+
+\item Shreyas Kalvankar et al. \textit{Galaxy Morphology Classification using EfficientNet Architectures.} 2020.\\ arXiv:
+\href{https://arxiv.org/abs/2008.13611}{2005.13611 [cs.CV]}.
+
+\item Kalvankar, Sh., Pandit, Hr., Parwate, Pr., Patil, At. \& Kamalapur, Sn., (2022). \textit{Astronomical Image Colorization and Up-scaling with Conditional Generative Adversarial Networks.}\\ In: Demmler, D., Krupka, D. \& Federrath, H. (Hrsg.), INFORMATIK 2022. Gesellschaft für Informatik, Bonn. (S. 489\-498).
+\href{https://dl.gi.de/bitstream/handle/20.500.12116/39540/mlastro\_04.pdf}{DOI: 10.18420/inf2022\_40}.
+\end{rSection}
+
+\smallskip
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \smallskip
 \begin{rSection}{Professional Experience}
 
-\begin{rSubsection}{Relfor Labs Pvt. Ltd.}{August 2021 - November 2021}{Machine Learning Engineer}{Pune, India}
-\item Worked on audio data classification and designed multiple novel deep convolutional neural network architectures and hybrids which beat state of the art models with \textbf{>99\%} accuracy and \textbf{$\sim$0.99} F1-score
-    \item Performed extensive research on the designed architectures to understand data distribution of the network embeddings to create \textbf{novel loss functions}, a \textbf{customized gated unit block} and model tweaks for effectively boosting performance
-    \item Analysed the network output distribution by applying statistical methods for calculating threshold values to remove false positives to boost model performance to \textbf{$\sim$99.98\%} accuracy and \textbf{100\%} precision
+\begin{rSubsection}{Dalton Maag Ltd.}{November 2021 - Present}{}{}
+\begin{rSubsubsection}{\textbf{Software Developer}}{London, United Kingdom}{}
+\item Developed a system for automatically generate Chinese-Japanese-Korean font glyphs using genetic algorithms.
+\item Implemented glyph data model for Devanagari script from scratch and improved data models for Arabic, Greek and Cyrillic scripts in the internal pricing application, enabling accurate pricing for non-Latin projects.
+\item Upgraded company's pricing model in the internal pricing application to provide faster, accurate quotes, boosting efficiency in project planning and increasing productivity.
+\end{rSubsubsection}
+\vspace{-0.4em}
 \end{rSubsection}
-
-\begin{rSubsection}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Software Development Intern}{Nashik, India}
-\item Developed a front-end using AngularJS for forex trading with interactive visualization and chatbot service, providing an appealing platform for forex operations
-\item Studied OLAP and data cubes for business intelligence on new company products to increase sales
-\item Studied technical analysis of market indices and option chain (equity derivatives) for better pricing models
-\item Created a python module for stress testing CPU and memory as per user input using variable load calibration
-\item Documented relevant codes and procedure
-\item GitHub: \href{https://github.com/obi-wan-shinobi/Stress-test}{CPU and Memory Stressing module} \& \href{https://github.com/obi-wan-shinobi/Forex-Trading}{Forex Trading Platform}
+\vspace{-0.4em}
+\hdashrule[1pt]{19cm}{0.5pt}{1mm 1mm}
+\begin{rSubsection}{Relfor Labs Pvt. Ltd.}
+{Pune, India}{}{}
+\begin{rSubsubsection}{\textbf{Machine Learning Research Scientist}}{September 2022 - Present}{}
+    \item Created novel neural architectures which out-performed the previous best-performing models, on additional data, by \textbf{2\%}, achieving an accuracy of \textbf{98.6\%} in audio data classification.
+    \item Set up the ML training pipeline using PyTorch lightning on Nvidia DGX A100, with automatic hyperparameter tuning using Optuna and dynamic architecture updates, expediting experimentation.
+    \item Experimented with several data models and improved the training pipeline, making experimentation \textbf{$\sim$10\%} faster, which boosted performance metrics by \textbf{$\sim$1\%}
+\end{rSubsubsection}\vspace{-1em}
+\begin{rSubsubsection}{\textbf{Machine Learning Engineer}}{August 2021 - November 2021}{}
+    \item Designed novel deep Convolutional Neural Network architectures for audio data classification which beat state-of-the-art models.
+    \item Performed extensive research on the designed architectures \& network embeddings and created \textbf{novel loss functions} and a \textbf{custom gated unit block} achieving \textbf{>98\%} accuracy and \textbf{$\sim$0.98} F1-score.
+    \item Implemented various statistical methods to boost model performance by analyzing threshold values and increasing precision to \textbf{$\sim$98\%} while maintaining high accuracy \textbf{>98\%}.
+\end{rSubsubsection}
+\vspace{-0.4em}
+\end{rSubsection}
+\vspace{-0.4em}
+\hdashrule[1pt]{19cm}{0.5pt}{1mm 1mm}
+\begin{rSubsection}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{}{}
+\begin{rSubsubsection}{\textbf{Software Development Intern}}{Nashik, India}{}
+\item Developed a front-end using AngularJS for forex trading with interactive visualization and chatbot service, providing an appealing platform for forex operations.
+\item Created a python module for stress testing CPU and memory as per user input using variable load calibration.
+\item GitHub: \href{https://github.com/obi-wan-shinobi/Stress-test}{CPU and Memory Stressing module} \& \href{https://github.com/obi-wan-shinobi/Forex-Trading}{Forex Trading Platform}.
+\end{rSubsubsection}
 \end{rSubsection}
 
 
@@ -123,62 +148,48 @@
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-\begin{rSection}{PUBLICATIONS}
-\item Shreyas Bapat et al. \textit{EinsteinPy: A Community Python Package for General Relativity.} 2020.\\ arXiv: \href{https://arxiv.org/abs/2005.11288}{2005.11288 [gr-qc]}.
-
-\item Shreyas Kalvankar et al. \textit{Galaxy Morphology Classification using EfficientNet Architectures.} 2020.\\ arXiv:
-\href{https://arxiv.org/abs/2008.13611}{2005.13611 [cs.CV]}.
-
-\item Shreyas Kalvankar et al. \textit{Astronomical Image Colorization and upscaling with Generative Adversarial Networks.} 2021.\\ arXiv:
-\href{https://arxiv.org/abs/2112.13865}{2112.13865 [eess.IV, cs.CV, cs.LG]}.
-
-\end{rSection}
-
-\smallskip
-\smallskip
-\pagebreak
 
 %----------------------------------------------------------------------------------------
 \begin{rSection}{PROJECTS \& RESEARCH}
 
-\begin{rSubsection}{\href{https://github.com/users/obi-wan-shinobi/projects/1}{Astronomical Image Colorization and Super-resolution using GANs}}{August 2020 - June 2021}{}{}
-\item A project for efficiently colorizing and up scaling unused astronomical images that could be potentially used for astronomical studies
-\item Created a dataset for the underlying problem by scraping images off the Hubble archives
+\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/Astronomical-Image-Colorization}{Astronomical Image Colorization and Super-resolution using GANs}}{August 2020 - June 2021}{}{}
+\vspace{-0.9em}
+\item Led a team of four members in a project for automatic colorizing and upscaling low-resolution, grayscale astronomical images.
+\item Created a dataset of $\sim 5000$ images by scraping the Hubble archives
 \item Developed variations of GAN architectures, effectively creating a novel training method, for colorizing images achieving visually pleasing results
-\item Implemented a variation of SRGAN architecture suitable for the data and obtained high resolution images
+\item Implemented a variation of SRGAN architecture suitable for the data and obtained high-resolution images
 \end{rSubsection}
 
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/Galaxy_Zoo}{The Galaxy Zoo Project}}{August 2019 - September 2020}{}{}
-\item A galaxy morphology classification project, based on Kaggle Galaxy Zoo 2 competition
-\item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with an rmse score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard
-\item Developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}
+\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/GalaxyEfficientNets}{The Galaxy Zoo Project}}{August 2019 - September 2020}{}{}
+\vspace{-0.9em}
+\item A galaxy morphology classification project, based on Kaggle Galaxy Zoo 2 competition, implementing the EfficientNet architectures
+\item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with a RMSE score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard.
+\item Developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}.
 \end{rSubsection}
 
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/einsteinpy}{The EinsteinPy Project}}{March 2020 - April 2020}{}{}
-\item Contributer to an open source community python package for general relativity
-\item Added Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations, into the code
-\item Corrections in the Kerr-Newman and Kerr metrics classes
-\item Added calculations of event horizon and ergosphere for a Kerr-Newman blackhole
+\begin{rSubsection}{\href{https://github.com/einsteinpy/einsteinpy}{The EinsteinPy Project}}{March 2020 - April 2020}{}{}
+\vspace{-0.9em}
+\item Contributor to an open source community python package for general relativity (\textbf{500+ stars} on GitHub).
+\item Added Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations, into the code.
+\item Corrections in the Kerr-Newman and Kerr metrics classes.
+\item Added calculations of the event horizon and ergosphere for a Kerr-Newman black hole.
 \item \href{https://doi.org/10.5281/zenodo.4445219
 }{DOI: 10.5281/zenodo.4445219}
 \end{rSubsection}
 
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/Modern-Art}{Miyazaki Art Cycle GAN}}{June 2021 - July 2021}{}{}
-\item A cycle GAN project for producing animated images in Studio Ghibli art style 
-\item Used conditional GANs in cyclic fashion to effectively produce anime style abstractions of real world photographs
+\begin{rSubsection}{Robocon}{August 2018 - May 2020}{}{}
+\vspace{-0.9em}
+\item Built a quadruped robot with gait similar to a horse, and a wheeled robot with dynamic locomotive abilities for ABU Robocon 2019
+\item Mentored junior members of the team for Robocon 2020; planned and assisted in creating two wheeled robots capable of performing intricate tasks of catching and throwing a rugby ball
 \end{rSubsection}
 
-\begin{rSubsection}{Robocon}{August 2018 - April 2019}{}{}
-\item Assigned to build and code a quadruped robot and a wheeled robot with dynamic locomotive abilities for ABU Robocon 2019
-\item Two robots were created, one being an autonomous quadruped and the other a wheeled robot which had dynamic locomotive abilities
-\end{rSubsection}
+\end{rSection}
 
-
-% \begin{rSubsection}{Game Development using Unity}{December 2018 - March 2019}{}{}
-% \item Created a first person shooter game in C\# using Unity engine
-% \item The project won the first prize at the Computer Graphics competition conducted at K. K. Wagh Institute of Engineering Education and Research under Computer Society of India
-% \end{rSubsection}
-
+\begin{rSection}{Scholastic \& Co-curricular Achievements}
+\vspace{-1em}
+\item Received the Best Outgoing Student Award in 2021 by the Head of Computer Engineering Dept., K. K. Wagh Institute
+\item Received the Award of Academic Excellence for the best academic performance across the institution among 1200 students in all Engg. departments
+\item Ranked 9 in phase 1 of ABU Robocon 2019 among 200+ teams across the country
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -188,8 +199,8 @@
 \begin{rSection}{Technical Strengths}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages &  C/C++, Python, Java, SQL \\
-Web Development & AngularJS, Typescript, HTML, CSS\\
+Computer Languages &  C/C++, Python, Ruby, Javascript, Typescript \\
+Web Development & AngularJS, VueJS, ElectronJS, Flask, Ruby on Rails, HTML, CSS\\
 Deep Learning Frameworks & Keras, TensorFlow, PyTorch \\
 Machine Learning Frameworks & Octave, Sci-kit\\
 Embedded Systems & Arduino, RaspberryPi, Teensy \\
@@ -199,264 +210,6 @@ Tools & Numpy, Pandas, Scipy, \LaTeX
 \end{tabular}
 
 \end{rSection}
-
-\begin{comment}
-
-%--------------------------------------------------
-\begin{rSection}{Relevant Courses}
-\itab{\textbf{Core Courses}} \tab{}  \tab{\textbf{MOOC}}
-\\ \itab{Data Structures and Algorithms} \tab{}  \tab{Deep Learning}
-\\ \itab{Computer Organization} \tab{}  \tab{Machine Learning}
-\\ \itab{Operating Systems} \tab{}  \tab{Computer Vision}
-\\ \itab{Theory of Computation} \tab{} \tab{Tensorflow and Keras}
-\\ \itab{Database Management Systems} \tab{}
-%\\ \itab{Data Analysis (Ongoing)} \tab{} \tab{Electrodynamics}
-%\\ \itab{Data Mining and Warehousing (Ongoing)}
-\newline
-\newline
-\itab{\textbf{Other Relevant Courses}}
-\\ \itab{Introduction to General Theory of Relativity}
-\\ \itab{Linear Algebra}
-\\ \itab{Mathematics for Machine Learning}
-
-
-\end{rSection}
-\end{comment}
-
-
 %----------------------------------------------------
 
-\end{document}
-
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass{resume} % Use the custom resume.cls style
-
-\usepackage{hyperref}
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
-
-  % If using pdflatex:
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[default]{lato}
-\usepackage{fontawesome}
-\usepackage{setspace}
-\usepackage{biblatex}
-
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-}
-
-
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Shreyas Kalvankar} % Your name
-\address{\faMapMarker ~ Nashik, Maharashta, India} % Your address
-%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{\footnotesize \faPhone ~ (+91)~9423555723 ~ \faEnvelope ~ shreyaskalvankar@gmail.com ~ \faLinkedin ~ linkedin.com/in/shreyas-kalvankar ~ \faGithub ~ github.com/obi-wan-shinobi} % Your phone number and email
-
-\addbibresource{references.bib}
-
-\begin{document}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-\smallskip
-\smallskip
-\smallskip
-\begin{rSection}{Education}
-
-{\bf Bachelor of Engineering (Computer Engineering)} \hfill {\em 2017 - 2021} 
-\\ K.K. Wagh Institute of Engineering  \hfill { Overall GPA: 9.58/10}
-\\ Education \& Research, Nashik
-
-\smallskip
-
-{\bf Higher Secondary Certificate} \hfill {\em 2017} 
-\\ HPT Arts \& RYK Science College, Nashik \hfill { Percentage: 87.07\%}
-
-\smallskip
-
-{\bf Secondary School Certificate} \hfill {\em 2015} 
-\\ Boys' Town Public School, Nashik \hfill { Percentage: 94.4\% }
-
-\end{rSection}
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
-\smallskip
-\smallskip
-\begin{rSection}{Technical Strengths}
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages &  C/C++, Python, Java \\
-Web Development & AngularJS, Typescript\\
-Deep Learning Frameworks & Keras, TensorFlow \\
-Machine Learning Frameworks & Octave, Sci-kit\\
-Embedded Systems & Arduino, RaspberryPi, Teensy \\
-Version Control & Git, GitHub \\
-
-\end{tabular}
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-\smallskip
-\smallskip
-\smallskip
-\begin{rSection}{Experience}
-
-\begin{rSubsection}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Summer Intern}{}
-\item Developed a front-end platform using AngularJS for forex trading with history charts, exchange rates and along with a news portal and chatbot service
-\item Studied and analysed data cubes and OLAP for business intelligence using company platforms
-\item Studied technical analysis of market indices and option chain (equity derivatives)
-\item Created a python module for stress testing CPU and memory as per user input using variable load calibration
-\item Documented relevant codes and procedure
-\item GitHub: \href{https://github.com/obi-wan-shinobi/Stress-test}{CPU and Memory Stressing module} \& \href{https://github.com/obi-wan-shinobi/Forex-Trading}{Forex Trading Platform}
-\end{rSubsection}
-
-
-\end{rSection}
-\smallskip
-\smallskip
-\smallskip
-%	EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-\begin{rSection}{PUBLICATIONS} 
-\item Shreyas Bapat et al. \textit{EinsteinPy: A Community Python Package for General Relativity.} 2020.\\ arXiv: \href{https://arxiv.org/abs/2005.11288}{2005.11288 [gr-qc]}.
-
-\item Shreyas Kalvankar et al. \textit{Galaxy Morphology Classification using EfficientNet Architectures.} 2020.\\ arXiv:
-\href{https://arxiv.org/abs/2008.13611}{2005.13611 [cs.CV]}.
-
-\end{rSection}
-
-\pagebreak
-
-\begin{rSection}{POSITIONS OF RESPONSIBILITY}
-
-\begin{rSubsection}{Team Vector}{August 2018 - April 2019}{Developer}{ABU Robocon 2019}
-\item Assigned to build and code a quadruped robot and a wheeled robot with dynamic locomotive abilities
-\item The project was about an annual competition conducted by Asia Broadcast Union and consisted of a series of tasks that were supposed to be performed abiding the rules of the competition
-\item Two robots were created, one being an autonomous quadruped and the other a wheeled robot which had dynamic locomotive abilities
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{Team Vector}{August 2019 - April 2020}{Mentor}{ABU Robocon 2020}
-\item Mentored junior members of the team for designing two robots with holonomic drives
-\item The project was about a competition which would have the robots play rugby with 5 obstacles in the way
-\item Two robots were created out of which one was supposed to have throwing and kicking capabilities and the other was supposed to have catching and placing capabilities. Both robots had dynamic locomotive abilities owing to the holonomic drive design
-\end{rSubsection}
-
-%------------------------------------------------
-
-\end{rSection}
-
-
-
-%----------------------------------------------------------------------------------------
-\begin{rSection}{PROJECTS \& RESEARCH} 
-
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/Galaxy_Zoo}{The Galaxy Zoo Project}}{August 2019 - Present}{}{}
-\item A galaxy morphology classification project using deep learning
-\item Studied different convolutional neural networks and their architectures
-\item Studied different architectural blocks to enhance performance
-\item Developed a network for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree
-\item Developed a network for classification of galaxies into 7 classes based on their morphologies
-\end{rSubsection}
-
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/einsteinpy}{The EinsteinPy Project}}{March 2020 - April 2020}{}{}
-\item Contributer to an open source community python package for general relativity
-\item \textbf{Contributions}:
-\item Addition of  Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations, into the code (\textit{PR: \#462 Issue: \#309})
-\item Corrections in the Kerr-Newman and Kerr metrics classes
-\item Added calculations of event horizon and ergosphere for a Kerr-Newman blackhole (\textit{PR: \#472 Issue: \#109})
-\end{rSubsection}
-
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/BTC_predictor}{Time series analysis and prediction}}{March 2019}{}{}
-\item Developed a recurrent neural network that analyses time series and predicts future time frame
-\item The project took into account a stock price, bitcoin exchange and other time series and could predict almost accurately the trend in prices
-\item Another project consisted of using pandemic data of active cases and visualising them as a time series and predicting the epi-curve for COVID-19
-\item An introductory project for LSTM networks which are extensively used in audio and sound analysis
-\end{rSubsection}
-
-\pagebreak
-
-\begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/kuzushiji}{Kuzushiji Recognition}}{September 2019}{}{}
-\item A Kaggle competition to transcribe ancient Kuzushiji into contemporary Japanese characters
-\item Created a code to visualize the data and performed statistical analysis
-\item Built a model to recognize the handwritten text
-\end{rSubsection}
-
-\begin{rSubsection}{Deep Writing}{December 2019}{}{}
-\item Created a RNN model with LSTM blocks to analyse books
-\item Trained the network over books from the same author and generated portions of new text
-\end{rSubsection}
-
-\begin{rSubsection}{Natural Language Processing}{December 2019 - May 2020}{}{}
-\item Made various short projects relating to Natural Language Processing
-\item Created a RNN model and trained it over jokes dataset to generate jokes
-\item Created a RNN \& LSTM network model and trained it over a poem dataset to generate poems
-\item Created and trained an ngram model and trained it over twitter data to generate tweets
-\end{rSubsection}
-
-\begin{rSubsection}{Game Development using Unity}{December 2018 - March 2019}{}{}
-\item Created a first person shooter game in C\# using Unity engine
-\item The project won the first prize at the Computer Graphics competition conducted at K. K. Wagh Institute of Engineering Education and Research under Computer Society of India
-\end{rSubsection}
-
-\end{rSection}
-
-
-%--------------------------------------------------
-\begin{rSection}{Relevant Courses}
-\itab{\textbf{Core Courses}} \tab{}  \tab{\textbf{MOOC}}
-\\ \itab{Data Structures and Algorithms} \tab{}  \tab{Deep Learning}
-\\ \itab{Computer Organization} \tab{}  \tab{Machine Learning} 
-\\ \itab{Operating Systems} \tab{}  \tab{Computer Vision} 
-\\ \itab{Theory of Computation} \tab{} \tab{Tensorflow and Keras}
-\\ \itab{Database Management Systems} \tab{}
-%\\ \itab{Data Analysis (Ongoing)} \tab{} \tab{Electrodynamics}
-%\\ \itab{Data Mining and Warehousing (Ongoing)}
-\newline
-\newline
-\itab{\textbf{Other Relevant Courses}} 
-\\ \itab{Introduction to General Theory of Relativity} 
-\\ \itab{Linear Algebra} 
-\\ \itab{Mathematics for Machine Learning}
-
-
-\end{rSection}
-
-
-
-%----------------------------------------------------
-\begin{rSection}{LANGUAGES}
-\item English \textit{\footnotesize{(Native or bilingual proficiency)}}
-\item Hindi \textit{\footnotesize{(Native or bilingual proficiency)}}
-\item Marathi \textit{\footnotesize{(Native or bilingual proficiency)}}
-\item Sanskrit \textit{\footnotesize{(Limited working proficiency)}}
-\item Japanese \textit{\footnotesize{(Elementary proficiency)}}
-\end{rSection}
-
-%---------------------------------------------------
-\begin{rSection}{INTERESTS}
-\itab{Deep Learning} \tab{}  \tab{Machine Learning}
-\\ \itab{Linear Algebra} \tab{}  \tab{Data Structures \& Algorithms}
-\\ \itab{Computer Vision} \tab{}  \tab{Data Science}
-\\ \itab{Differential Geometry \& General Relativity}
-\end{rSection}
-
-\end{document}
+\end{document}    

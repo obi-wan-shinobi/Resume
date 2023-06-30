@@ -25,6 +25,7 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{dashrule}
 
 \pagestyle{empty} % Suppress page numbers
 
@@ -94,7 +95,7 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
-  \sectionskip
+  % \sectionskip
   \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
   \hrule % Horizontal line
@@ -111,16 +112,30 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+ {\bf #1} \hfill \ifthenelse{\equal{#2}{}}{}{#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{\par\vspace{-\baselineskip}}{ % If the third argument is not specified, don't print the job title and location line
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
+   \itemsep -0.3em \vspace{-0.3em} % Compress items in list together for aesthetics
+   \item[]
+   }{
   \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+  \vspace{0.3em} % Some space after the list of bullet points
+}
+
+\newenvironment{rSubsubsection}[3]{ % 3 input arguments - job title, years(s) employed, location
+    \vspace{1em}
+    {\em #1} \hfill {\em #2}
+    \ifthenelse{\equal{#3}{}}{}{
+    \\
+    {\em #3}
+    }\smallskip
+    \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.3em \vspace{-0.3em} % Compress items in list together for aesthetics
+  }{
+  \end{list}  
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
