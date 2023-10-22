@@ -28,7 +28,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=1.20cm,right=1.20cm,top=1.4cm,bottom=1.4cm,columnsep=1.1cm}
+\geometry{left=1.1cm,right=1.1cm,top=1.2cm,bottom=1.2cm,columnsep=0.8cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -65,6 +65,7 @@
 % for \cvskill if you want to
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
+\newcommand*\googlescholaricon{\raisebox{-0.3em}{\includegraphics[width=1em]{google-scholar.pdf}}}
 
 %% sample.bib contains your publications
 \addbibresource{sample.bib}
@@ -72,19 +73,19 @@
 \begin{document}
 \name{Shreyas Kalvankar}
 \tagline{}
-% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 %% You can add multiple photos on the left or right
 %\photoR{2.5cm}{mmayer-wikipedia-cc-by-2_0}
 % \photoL{2cm}{Yacht_High,Suitcase_High}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
+  \printinfo{\faGlobe}{obi-wan-shinobi.github.io}
   \email{shreyaskalvankar@gmail.com}
   \phone{+919423555723}
-  \location{Maharashtra, India}
+  % \location{Maharashtra, India}
   \linkedin{linkedin.com/in/shreyas-kalvankar}
   \github{github.com/obi-wan-shinobi}
-  \homepage{sway.office.com/yhR4wQDRUCaoGtDt}
+  \printinfo{\googlescholaricon}{Scholar Profile \href{https://scholar.google.com/citations?user=W8-T__UAAAAJ&hl=en}{[link]}}
 %   \github{github.com/mmayer} % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
@@ -113,14 +114,21 @@
 \cvsection{Experience}
 \cvevent{Software Developer}{Dalton Maag}{November 2021 - Present}{London, United Kingdom}
 \begin{itemize}
-    \item Worked on a novel technique of CJK font glyph generation using genetic algorithms
+    \item Assisted in developing a Python system that used Genetic Algorithms for automatically generating thousands of CJK font glyphs, drastically cutting down production time.
+    \item \textbf{Pricebot}: Pricebot simplified typeface pricing by considering factors like the number of weights, axes, and scripts. It aimed to ensure accurate and consistent pricing while relieving designers of the time-consuming and error-prone task of manual quoting, thus preventing project overruns and unexpected costs.
+    \item It's a web app with a Ruby on Rails back-end and a VueJS \& Typescript front-end. I developed and fine-tuned the pricing models in Typescript based on expected outputs.
+    \item My colleague and I enhanced glyph data models for Arabic, Greek, Cyrillic scripts, accurately representing their letters. I also created a new model from scratch for Devanagari, ensuring precise pricing for non-Latin projects.
+    \item Using graph theory, I devised a process to efficiently create project plans that accurately depict timelines, drastically reducing planning time.
 \end{itemize}
 \divider
+\cvevent{Machine Learning Research Scientist (Consulting)}{Relfor Labs Pvt. Ltd.}{September 2022 - Present}{Pune, India}
+\begin{itemize}
+    \item Set up the ML training pipeline using PyTorch lightning on Nvidia DGX A100, with automatic hyperparameter tuning using Optuna and dynamic architecture updates, expediting experimentation, making it \textbf{$\sim$10\%} faster, which boosted performance metrics.
+\end{itemize}
 \cvevent{Machine Learning Engineer}{Relfor Labs Pvt. Ltd.}{August 2021 - November 2021}{Pune, India}
 \begin{itemize}
-    \item Worked on audio data classification and designed multiple novel deep convolutional neural network architectures and hybrids which beat state of the art models with \textbf{>99\%} accuracy and \textbf{$\sim$0.99} F1-score
-    \item Performed extensive research on the designed architectures to understand data distribution of the network embeddings to create \textbf{novel loss functions}, a \textbf{customized gated unit block} and model tweaks for effectively boosting performance
-    \item Analysed the network output distribution by applying statistical methods for calculating threshold values to boost model performance to \textbf{$\sim$99.98\%} accuracy and \textbf{100\%} precision
+    \item Worked on audio data classification and designed multiple novel deep convolutional neural network architectures in PyTorch, which beat state-of-the-art models with \textbf{~98.6\%} accuracy and \textbf{$\sim$0.98} F1-score
+   \item Leveraged metric analysis techniques in SKLearn and PyTorch to determine optimum threshold values, achieving a precision of \textbf{$\sim$98\%} while maintaining high accuracy \textbf{>98\%}.
 \end{itemize}
 \divider
 \cvevent{Software Development Intern}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Nashik, India}
@@ -143,26 +151,26 @@
 
 \cvsection{Technical Skills}
 \begin{itemize}
-    \item \textbf{Computer Languages} : C, C++, Python
-    \item \textbf{Web Development} : AngularJS, Typescript, HTML, CSS
-    \item \textbf{Deep Learning Frameworks} : Keras, Tensorflow, PyTorch
-    \item \textbf{Machine Learning Frameworks} : Octave, Sci-kit Learn
-    \item \textbf{Embedded Software Programming} : Arduino, Raspberry Pi, Teensy
-    \item \textbf{Version Control} : Git, GitHub
+    \item \textbf{Computer Languages} : C, C++, Python, 
+    \item \textbf{Web Development} : VueJS, Javascript, Typescript, HTML, CSS, Ruby on Rails
+    \item \textbf{ML Frameworks} : Keras, Tensorflow, PyTorch, Sci-Kit Learn
+    % \item \textbf{Machine Learning Frameworks} : Octave, Sci-kit Learn
+    % \item \textbf{Embedded Software Programming} : Arduino, Raspberry Pi, Teensy
+    % \item \textbf{Version Control} : Git, GitHub
 \end{itemize}
 
-\cvsection{Positions of Responsibility}
-\cvevent{Software Developer}{Team Vector, ABU Robocon 2019}{August 2018 - April 2019}{}
-\begin{itemize}
-    \item Assigned to build and code a quadruped robot and a wheeled robot with dynamic locomotive abilities for ABU Robocon 2019
-\end{itemize}
+% \cvsection{Positions of Responsibility}
+% \cvevent{Software Developer}{Team Vector, ABU Robocon 2019}{August 2018 - April 2019}{}
+% \begin{itemize}
+%     \item Assigned to build and code a quadruped robot and a wheeled robot with dynamic locomotive abilities for ABU Robocon 2019
+% \end{itemize}
 
-\divider
+% \divider
 
-\cvevent{Mentor}{Team Vector, ABU Robocon 2020}{August 2019 - April 2020}{}
-\begin{itemize}
-    \item Helped and guided junior members of the team in building robots that could efficiently handle locomotion and throwing, catching and kicking a football
-\end{itemize}
+% \cvevent{Mentor}{Team Vector, ABU Robocon 2020}{August 2019 - April 2020}{}
+% \begin{itemize}
+%     \item Helped and guided junior members of the team in building robots that could efficiently handle locomotion and throwing, catching and kicking a football
+% \end{itemize}
 
 \begin{comment}
 \cvsection{Strengths}
@@ -181,27 +189,15 @@
 \cvsection{Education}
 \cvevent{B.E (Computer Engineering)}{K.K. Wagh Institute of Engineering Education and Research}{2017-2021}{Nashik}
 \begin{itemize}
-    \item CGPA: 9.7/10
+    \item CGPA: 9.7/10 (Rank 1)
 \end{itemize}
-
-\cvevent{Higher Secondary Certificate}{H.P.T Arts and R.Y.K Science College}{2017}{Nashik}
-\begin{itemize}
-    \item 87.07\%
-\end{itemize}
-
-\begin{comment}
-\cvevent{Secondary School Certificate}{Boys' Town Public School}{2015}{Nashik}
-\begin{itemize}
-    \item 94.4\%
-\end{itemize}
-\end{comment}
 
 \cvsection{Personal Projects \& Research}
 
     \cvsubsection{THE GALAXY ZOO PROJECT}
     \begin{itemize}
-        \item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with an rmse score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard
-        \item Developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}
+        \item Developed a CNN in Tensorflow for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with an rmse score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard
+        \item Also developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}
     \end{itemize}
 \begin{comment}
 \cvsubsection{THE SCHRODPY PROJECT}
@@ -219,13 +215,14 @@
         \item Added Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations, into the code %(\textit{PR: \#462 Issue: \#309})
         \item Corrections in the Kerr-Newman and Kerr metrics classes
         \item Added calculations of event horizon and ergosphere for a Kerr-Newman blackhole %(\textit{PR: \#472 Issue: \#109}) 
-        \item \href{https://doi.org/10.5281/zenodo.4445219
-}{DOI: 10.5281/zenodo.4445219}
+        \item \href{https://doi.org/10.5281/zenodo.4445219}{DOI: 10.5281/zenodo.4445219}
     \end{itemize}
 \end{itemize}
 \cvsection{Publications}
 \nocite{*}
 \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}}, type=misc]
+
+
 \end{paracol}
 
 \end{document}

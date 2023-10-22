@@ -39,7 +39,7 @@
 \documentclass{resume} % Use the custom resume.cls style
 
 \usepackage{hyperref}
-\usepackage[left=0.45in,top=0.35in,right=0.45in,bottom=0.35in]{geometry} % Document margins
+\usepackage[left=0.45in,top=0.3in,right=0.45in,bottom=0.3in]{geometry} % Document margins
 
   % If using pdflatex:
 \usepackage[utf8]{inputenc}
@@ -64,10 +64,14 @@
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Shreyas Kalvankar} % Your name
-\address{\faMapMarker ~ Nashik, Maharashta, India} % Your address
+% \address{\faMapMarker ~ Nashik, Maharashta, India} % Your address
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{\footnotesize \faPhone ~ (+91)~9423555723 ~ \faEnvelope ~ shreyaskalvankar@gmail.com ~ \faLinkedin ~ \href{https://linkedin.com/in/shreyas-kalvankar}{linkedin.com/in/shreyas-kalvankar} ~ \faGithub ~ \href{https://github.com/obi-wan-shinobi}{github.com/obi-wan-shinobi} ~ 
-\googlescholaricon ~ \href{https://scholar.google.com/citations?hl=en&user=W8-T__UAAAAJ}{Scholar}}
+\address{\footnotesize \faPhone ~ (+91)~9423555723 ~ \faEnvelope ~ shreyaskalvankar@gmail.com ~ 
+\faGlobe ~ obi-wan-shinobi.github.io}
+
+\address{\small \faLinkedin ~ \href{https://linkedin.com/in/shreyas-kalvankar}{linkedin.com/in/shreyas-kalvankar} ~ \faGithub ~ \href{https://github.com/obi-wan-shinobi}{github.com/obi-wan-shinobi}}
+
+% \googlescholaricon ~ \href{https://scholar.google.com/citations?hl=en&user=W8-T__UAAAAJ}{Scholar}
 
 \addbibresource{references.bib}
 
@@ -109,9 +113,12 @@
 
 \begin{rSubsection}{Dalton Maag Ltd.}{November 2021 - Present}{}{}
 \begin{rSubsubsection}{\textbf{Software Developer}}{London, United Kingdom}{}
-\item Developed a system for automatically generate Chinese-Japanese-Korean font glyphs using genetic algorithms.
-\item Implemented glyph data model for Devanagari script from scratch and improved data models for Arabic, Greek and Cyrillic scripts in the internal pricing application, enabling accurate pricing for non-Latin projects.
-\item Upgraded company's pricing model in the internal pricing application to provide faster, accurate quotes, boosting efficiency in project planning and increasing productivity.
+\item \textbf{CJK Project}: Chinese, Japanese, and Korean (CJK) typefaces require designing thousands of glyphs manually, which is extremely time-consuming. My manager and I designed a system for a POC in Python for the automatic generation of CJK font glyphs using Genetic Algorithms, which would significantly reduce the production time.
+\item \textbf{Pricebot}:
+\item Pricebot simplified typeface pricing by considering factors like the number of weights, axes, and scripts. It aimed to ensure accurate and consistent pricing while relieving designers of the time-consuming and error-prone task of manual quoting, thus preventing project overruns and unexpected costs.
+\item It's a web app with a Ruby on Rails back-end and a VueJS \& Typescript front-end. I developed and fine-tuned the pricing models in Typescript based on expected outputs.
+\item My colleague and I enhanced glyph data models for Arabic, Greek, Cyrillic scripts, accurately representing their letters. I also created a new model from scratch for Devanagari, ensuring precise pricing for non-Latin projects.
+\item Using graph theory, I devised a process to efficiently create project plans that accurately depict timelines, drastically reducing planning time.
 \end{rSubsubsection}
 \vspace{-0.4em}
 \end{rSubsection}
@@ -119,15 +126,12 @@
 \hdashrule[1pt]{19cm}{0.5pt}{1mm 1mm}
 \begin{rSubsection}{Relfor Labs Pvt. Ltd.}
 {Pune, India}{}{}
-\begin{rSubsubsection}{\textbf{Machine Learning Research Scientist}}{September 2022 - Present}{}
-    \item Created novel neural architectures which out-performed the previous best-performing models, on additional data, by \textbf{2\%}, achieving an accuracy of \textbf{98.6\%} in audio data classification.
-    \item Set up the ML training pipeline using PyTorch lightning on Nvidia DGX A100, with automatic hyperparameter tuning using Optuna and dynamic architecture updates, expediting experimentation.
-    \item Experimented with several data models and improved the training pipeline, making experimentation \textbf{$\sim$10\%} faster, which boosted performance metrics by \textbf{$\sim$1\%}
+\begin{rSubsubsection}{\textbf{Machine Learning Research Scientist (consulting)}}{September 2022 - Present}{}
+    \item Set up the ML training pipeline using PyTorch lightning on Nvidia DGX A100, with automatic hyperparameter tuning using Optuna and dynamic architecture updates, expediting experimentation, making it \textbf{$\sim$10\%} faster, which boosted performance metrics.
 \end{rSubsubsection}\vspace{-1em}
 \begin{rSubsubsection}{\textbf{Machine Learning Engineer}}{August 2021 - November 2021}{}
-    \item Designed novel deep Convolutional Neural Network architectures for audio data classification which beat state-of-the-art models.
-    \item Performed extensive research on the designed architectures \& network embeddings and created \textbf{novel loss functions} and a \textbf{custom gated unit block} achieving \textbf{>98\%} accuracy and \textbf{$\sim$0.98} F1-score.
-    \item Implemented various statistical methods to boost model performance by analyzing threshold values and increasing precision to \textbf{$\sim$98\%} while maintaining high accuracy \textbf{>98\%}.
+    \item Designed novel deep Convolutional Neural Network architectures in PyTorch for audio data classification, which beat state-of-the-art models achieving \textbf{>98\%} accuracy and textbf{$\sim$0.98} F1-score.
+    \item Implemented various statistical methods using Sci-kit learn to boost model performance by analyzing threshold values and increasing precision to \textbf{$\sim$98\%} while maintaining high accuracy \textbf{>98\%}.
 \end{rSubsubsection}
 \vspace{-0.4em}
 \end{rSubsection}
@@ -136,7 +140,7 @@
 \begin{rSubsection}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{}{}
 \begin{rSubsubsection}{\textbf{Software Development Intern}}{Nashik, India}{}
 \item Developed a front-end using AngularJS for forex trading with interactive visualization and chatbot service, providing an appealing platform for forex operations.
-\item Created a python module for stress testing CPU and memory as per user input using variable load calibration.
+\item Created a Python module for stress testing CPU and memory as per user input using variable load calibration.
 \item GitHub: \href{https://github.com/obi-wan-shinobi/Stress-test}{CPU and Memory Stressing module} \& \href{https://github.com/obi-wan-shinobi/Forex-Trading}{Forex Trading Platform}.
 \end{rSubsubsection}
 \end{rSubsection}
@@ -156,20 +160,20 @@
 \vspace{-0.9em}
 \item Led a team of four members in a project for automatic colorizing and upscaling low-resolution, grayscale astronomical images.
 \item Created a dataset of $\sim 5000$ images by scraping the Hubble archives
-\item Developed variations of GAN architectures, effectively creating a novel training method, for colorizing images achieving visually pleasing results
+\item Developed variations of GAN architectures in Tensorflow, effectively creating a novel training method for colorizing images achieving visually pleasing results
 \item Implemented a variation of SRGAN architecture suitable for the data and obtained high-resolution images
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/obi-wan-shinobi/GalaxyEfficientNets}{The Galaxy Zoo Project}}{August 2019 - September 2020}{}{}
 \vspace{-0.9em}
-\item A galaxy morphology classification project, based on Kaggle Galaxy Zoo 2 competition, implementing the EfficientNet architectures
+\item A galaxy morphology classification, based on Kaggle Galaxy Zoo 2 competition, implementing the EfficientNet architectures in Tensorflow.
 \item Developed a CNN for vote fraction predictions of 37 galaxy features from the Galaxy Zoo decision tree with a RMSE score of \textbf{0.07765}, ranking us in the \textbf{top 3} on the public leaderboard.
 \item Developed a CNN for classification of galaxies into 7 classes based on their morphologies with an accuracy of \textbf{93.7\%} and an F1 score of \textbf{0.8857}.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/einsteinpy/einsteinpy}{The EinsteinPy Project}}{March 2020 - April 2020}{}{}
 \vspace{-0.9em}
-\item Contributor to an open source community python package for general relativity (\textbf{500+ stars} on GitHub).
+\item Contributor to an open source community Python package for general relativity (\textbf{500+ stars} on GitHub).
 \item Added Reissner–Nordström metric: a static solution to the Einstein-Maxwell field equations, into the code.
 \item Corrections in the Kerr-Newman and Kerr metrics classes.
 \item Added calculations of the event horizon and ergosphere for a Kerr-Newman black hole.
