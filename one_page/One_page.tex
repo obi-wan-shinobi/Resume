@@ -28,7 +28,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=1.1cm,right=1.1cm,top=1.2cm,bottom=1.2cm,columnsep=0.8cm}
+\geometry{left=0.9cm,right=0.9cm,top=0.9cm,bottom=0.9cm,columnsep=0.8cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -79,10 +79,11 @@
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \printinfo{\faGlobe}{obi-wan-shinobi.github.io}
+  % \printinfo{\faGlobe}{obi-wan-shinobi.github.io}
+  \homepage{obi-wan-shinobi.github.io}
   \email{shreyaskalvankar@gmail.com}
   \phone{+919423555723}
-  % \location{Maharashtra, India}
+  \location{Maharashtra, India}
   \linkedin{linkedin.com/in/shreyas-kalvankar}
   \github{github.com/obi-wan-shinobi}
   \printinfo{\googlescholaricon}{Scholar Profile \href{https://scholar.google.com/citations?user=W8-T__UAAAAJ&hl=en}{[link]}}
@@ -112,29 +113,45 @@
 \begin{paracol}{2}
 
 \cvsection{Experience}
-\cvevent{Software Developer}{Dalton Maag}{November 2021 - Present}{London, United Kingdom}
+\cvevent{Software Developer}{Dalton Maag Ltd.}{November 2021 - Present}{London, United Kingdom}
 \begin{itemize}
-    \item Assisted in developing a Python system that used Genetic Algorithms for automatically generating thousands of CJK font glyphs, drastically cutting down production time.
-    \item \textbf{Pricebot}: Pricebot simplified typeface pricing by considering factors like the number of weights, axes, and scripts. It aimed to ensure accurate and consistent pricing while relieving designers of the time-consuming and error-prone task of manual quoting, thus preventing project overruns and unexpected costs.
-    \item It's a web app with a Ruby on Rails back-end and a VueJS \& Typescript front-end. I developed and fine-tuned the pricing models in Typescript based on expected outputs.
-    \item My colleague and I enhanced glyph data models for Arabic, Greek, Cyrillic scripts, accurately representing their letters. I also created a new model from scratch for Devanagari, ensuring precise pricing for non-Latin projects.
-    \item Using graph theory, I devised a process to efficiently create project plans that accurately depict timelines, drastically reducing planning time.
+\begin{footnotesize}
+    \item Developed a Python-based Proof of Concept (POC) utilizing Genetic Algorithms to \textbf{automate the generation of thousands of CJK font glyphs}, with the projected potential to significantly reduce production time from \textbf{months} to \textbf{minutes}.
+    % \item Developed PriceBot, a web application with Ruby on Rails back-end and a VueJS \& Typescript front-end to simplify typeface pricing.
+    \item Accelerated quote generation from \textbf{hours} to \textbf{seconds} by automating pricing with PriceBot, refining pricing models in Typescript and Ruby on Rails.
+    % \item Implemented and fine-tuned pricing models in Typescript, allowing PriceBot to automate quote generation within \textbf{seconds}, a drastic improvement over the previous manual process that typically took \textbf{hours}.
+    \item Implemented an application-health-tracking feature in Ruby on Rails to monitor pricing model states, issuing warnings to end users when pricing diverged significantly from expected figures, thereby preventing revenue loss by saving \textbf{hundreds of thousands of GBP} in response to the challenge of potential inaccuracies in project quotes.
+    \item Containerized the application-health-tracking feature and seamlessly integrated it with GitLab CI/CD for continuous monitoring, enhancing operational efficiency.
+    \item Developed glyph data models for Arabic, Greek, Cyrillic, and Devanagari, ensuring precise pricing for non-Latin projects, contributing to an increased client base.
+    \item Implemented a streamlined process in Typescript utilizing graphs theory to efficiently generate project plans, \textbf{reducing planning time from hours to a few minutes}, and delivering precise turnaround times to clients.
+    \item Contributed to the development of DSedit, an ElectronJS application with a VueJS frontend, serving as a unified platform housing all internal tools and scripts, aimed at providing seamless accessibility and enhancing operational efficiency.
+\end{footnotesize}
 \end{itemize}
-\divider
-\cvevent{Machine Learning Research Scientist (Consulting)}{Relfor Labs Pvt. Ltd.}{September 2022 - Present}{Pune, India}
+\vspace{5px}
+% \divider
+\cvevent{Machine Learning Research Scientist (Consultant)}{Relfor Labs Pvt. Ltd.}{September 2022 - Present}{Pune, India}
 \begin{itemize}
-    \item Set up the ML training pipeline using PyTorch lightning on Nvidia DGX A100, with automatic hyperparameter tuning using Optuna and dynamic architecture updates, expediting experimentation, making it \textbf{$\sim$10\%} faster, which boosted performance metrics.
+\begin{footnotesize}
+    \item Set up the ML training pipeline using PyTorch lightning on Nvidia DGX A100, with automatic hyperparameter tuning using Optuna, expediting experimentation, making it \textbf{$\sim$50\%} faster.
+    \item Revamped ETL pipeline to optimize CPU and storage usage, resulting in an \textbf{8x} speed improvement and a \textbf{30\%} boost in storage efficiency while processing terabytes of data.  
+\end{footnotesize}
 \end{itemize}
 \cvevent{Machine Learning Engineer}{Relfor Labs Pvt. Ltd.}{August 2021 - November 2021}{Pune, India}
 \begin{itemize}
-    \item Worked on audio data classification and designed multiple novel deep convolutional neural network architectures in PyTorch, which beat state-of-the-art models with \textbf{~98.6\%} accuracy and \textbf{$\sim$0.98} F1-score
-   \item Leveraged metric analysis techniques in SKLearn and PyTorch to determine optimum threshold values, achieving a precision of \textbf{$\sim$98\%} while maintaining high accuracy \textbf{>98\%}.
+\begin{footnotesize}
+    \item Designed multiple novel deep convolutional neural network architectures for audio data classification in PyTorch, which beat state-of-the-art models with \textbf{~98.6\%} accuracy and \textbf{$\sim$0.98} F1-score.
+   \item Implemented various threshold optimization techniques in SKLearn and PyTorch, achieving a precision of \textbf{$\sim$98\%} while maintaining high accuracy \textbf{>98\%}.
+\end{footnotesize}
 \end{itemize}
-\divider
+% \divider
+\vspace{5px}
 \cvevent{Software Development Intern}{FinIQ Consulting India Pvt. Ltd.}{May 2020 - June 2020}{Nashik, India}
 \begin{itemize}
-\item Set up an online platform for Forex trading using AngularJS as a new feature for the customers
-\item Created a python module for stress testing CPU and memory with variable load for integration in the company cloud platforms' testing pipeline
+\begin{footnotesize}
+\item Set up an online platform for Forex trading using AngularJS as a new feature for the customers.
+\item Created an open-source Python module for stress testing CPU and memory with variable load which was later integrated into the company's cloud platforms' testing pipeline.
+\end{footnotesize}
+
 \end{itemize}
 
 \begin{comment}
@@ -149,16 +166,23 @@
 \end{comment}
 
 
-\cvsection{Technical Skills}
+\cvsection{Technical skills}
+% Python, C, C++, Javascript(Babel ES6, Typescript, Webpack, Mocha, Chai),
+% ReactJs, VueJS, HTML, CSS, Ruby on Rails,
+% MongoDB, PostgreSQL, Docker, Keras, Tensorflow, PyTorch
 \begin{itemize}
-    \item \textbf{Computer Languages} : C, C++, Python, 
-    \item \textbf{Web Development} : VueJS, Javascript, Typescript, HTML, CSS, Ruby on Rails
-    \item \textbf{ML Frameworks} : Keras, Tensorflow, PyTorch, Sci-Kit Learn
+\begin{footnotesize}
+    \item \textbf{Computer Languages} : C, C++, Python, Java (J2EE)
+    \item \textbf{Web Development} : Javascript (Babel ES6, Typescript, Webpack, Mocha, Chai), HTML, CSS, Ruby on Rails, ReactJS, VueJS
+    \item \textbf{ML Frameworks} : Keras, Tensorflow, PyTorch
+    \item \textbf{Database \& Big Data} : mongoDB, Postgres, Spark
+    \item \textbf{Containerization} : Docker
+    \item \textbf{Cloud}: Google Cloud Platform, Cloud Queue, GCP Buckets, Google Cloud Functions
     % \item \textbf{Machine Learning Frameworks} : Octave, Sci-kit Learn
     % \item \textbf{Embedded Software Programming} : Arduino, Raspberry Pi, Teensy
     % \item \textbf{Version Control} : Git, GitHub
+\end{footnotesize}
 \end{itemize}
-
 % \cvsection{Positions of Responsibility}
 % \cvevent{Software Developer}{Team Vector, ABU Robocon 2019}{August 2018 - April 2019}{}
 % \begin{itemize}
@@ -192,7 +216,7 @@
     \item CGPA: 9.7/10 (Rank 1)
 \end{itemize}
 
-\cvsection{Personal Projects \& Research}
+\cvsection{Personal}
 
     \cvsubsection{THE GALAXY ZOO PROJECT}
     \begin{itemize}
